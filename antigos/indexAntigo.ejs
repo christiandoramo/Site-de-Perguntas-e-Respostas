@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando Projeto 01</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- procura automaticamente na pasta public -->
+</head>
+<body>
+    <img width="100px" height="100px" src="img\UNREAL LIMPO.png" alt="Unreal Image">
+    <h1>Olá</h1>
+    <!-- <%= %> exibe variavel javascript no arquivo .ejs-->
+    <p>Nome: <%= nome %></p>
+    <p>Linguagem: <%= lang %></p>
+    <p>Empresa: <%= empresa %></p>
+    <p>Inscritos: <%= inscritos %></p>
+    <% if(nome == "Christian"){ %>
+        <strong>é christian</strong>
+    <% } %>
+
+    <% if(booleano){ %>
+        <h3>é true porque uma string n nula é sempre true mesmo que a string seja 'false'</h3>
+    <% }else { %>
+        <h3>Não exibiu pois uma string nula é um valor booleano falso</h3>
+    <% } %>
+
+    <% vetor.forEach( function(p){ %>
+        <hr>
+        <p> <%= p.nome %> 
+            <%= p.ano %> </p>
+    <% }) %>
+    <hr>
+</body>
+</html>

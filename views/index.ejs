@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs")  %> 
+<body>
+    <div class="container">
+        <%-include("partials/navbar.ejs")%> 
+        <div class="card bg-light">
+            <div class="card-header">
+                <h1>Perguntas</h1>  
+                <a href="/perguntar"><button class="btn btn-primary">
+                    Perguntar
+                    </button></a>
+            </div>
+            <div class="card-body">
+                <!-- mostrando os dados do back-end no front-end -->
+                <% perguntas.forEach( function(pergunta){ %>
+                <p><strong><%= pergunta.titulo %></strong></p>
+                <div class="card-footer">
+                    <a href="/pergunta/<%= pergunta.id %>"><button class="btn btn-primary">
+                        Responder
+                        </button></a>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<%- include("partials/footer.ejs")  %> 

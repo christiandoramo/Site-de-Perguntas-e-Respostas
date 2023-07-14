@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs")  %> 
+<body>
+    <!-- container é uma classe basica do bootstrap que já vem c css configurado -->
+    <div class="container">
+        <%- include("partials/navbar.ejs")  %> 
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h3>Realizar Pergunta</h3>
+            </div>
+            <div class="card-body" >
+                <form method="post" action="/postpergunta">
+                    <label for="titulo">Titulo</label>
+                    <input name="titulo" type="text" class="form-control" placeholder="Titulo">
+                    <br>
+                    <label for="descricao">Descrição</label>
+                    <textarea name="descricao" class="form-control" placeholder="Descreva sua pergunta aqui"></textarea>
+                    <br>
+                    <button class="btn btn-dark">Perguntar</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer.ejs")  %> 
